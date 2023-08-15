@@ -2,6 +2,7 @@ import document
 from selenium import webdriver
 from time import sleep
 
+from selenium.common import NoSuchElementException
 from selenium.webdriver import ActionChains, Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
@@ -95,3 +96,16 @@ driver.find_element(By.XPATH, "/html/body/div[6]/div/div[2]").click()
 sleep(1)
 driver.find_element(By.XPATH, "/html/body/div[6]/div/div[2]/div/div[2]/div[3]/button[2]/span").click()
 driver.find_element(By.XPATH, "/html/body/div[3]/div/div[2]/div/div[2]/div[3]/button[2]/span").click()
+sleep(1)
+driver.find_element(By.XPATH, "//*[@id='ptp']/section/main/div/div/div[1]/div[2]/div/div/div/div/div/div/div[2]/div["
+                              "1]/div/div/div/div[4]/span/div/span").click()
+sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[3]/div/div/div/div[2]/div/div[2]/button[2]/span").click()
+
+try:
+    driver.find_element(By.XPATH,
+                        "//*[@id='ptp']/section/main/div/div/div[1]/div[2]/div/div/div/div/div/div/div[2]/div["
+                        "1]/div/div/div/div[2]/span").click()
+    print("删除成功")
+except NoSuchElementException:
+    print("没有删除成功")
