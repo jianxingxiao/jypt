@@ -20,10 +20,10 @@ driver.find_element(By.XPATH, "//button[@class='ant-btn ant-btn-primary ant-btn-
 driver.find_element(By.XPATH, "//*[@id='ptp']/section/header/div[1]/div/ul/li[2]/span/span").click()
 driver.find_element(By.XPATH, "//*[@id='ptp']/section/main/div/div/div[1]/div[2]/div/div/div/div/div/div/div[1]/div["
                               "2]/button/span").click()
-driver.find_element(By.XPATH, "//input[@id='form_item_name']").send_keys('c语言')
+driver.find_element(By.XPATH, "//input[@id='form_item_name']").send_keys('c++')
 iframe = driver.find_element(By.XPATH, '//div[2]/div[1]/iframe')
 driver.switch_to.frame(iframe)
-driver.find_element(By.XPATH, "//*[@id='tinymce']/p").send_keys('c语言是一个very good的语言')
+driver.find_element(By.XPATH, "//*[@id='tinymce']/p").send_keys('c++是一个very good的语言')
 driver.switch_to.default_content()
 driver.find_element(By.XPATH, "//button[@class='ant-btn']").click()
 driver.find_element(By.XPATH, "//input[@type='file']").send_keys('C:/Users/dell/Desktop/c.png')
@@ -84,24 +84,14 @@ driver.find_element(By.XPATH, "/html/body/div[8]/div/div[2]/div/div[2]/div[2]/di
                               "1]/label/span/input").click()
 sleep(1)
 driver.find_element(By.XPATH, "/html/body/div[8]/div/div[2]/div/div[2]/div[3]/div/div[2]").click()
-# clickable = driver.find_element(By.XPATH,
-#                                 '/html/body/div[5]/div/div[2]/div/div[2]/div[2]/form/div[1]/div['
-#                                 '2]/div/div/div/div/div/div')
-# ActionChains(driver).click(clickable).perform()
 
-# js_code = """
-# var element = document.querySelector('span[aria-live="polite"]');
-# element.innerText = '在线编程';
-# """
-# driver.execute_script(js_code)
-# 然后模拟鼠标移动并释放事件，这个过程会导致滚动条位置发生变化
-# action_chains.move_by_offset(0, 10000).release().perform()
-# 定位元素
-# target_element = driver.find_element(By.CSS_SELECTOR, 'body > div:nth-child(13) > div > div.ant-modal-wrap.ustchcs-modal-container.undefined.ant-modal-centered > div > div.ant-modal-content > div.ant-modal-body > div > div')
-
-# 模拟鼠标按下事件
-# action_chains = ActionChains(driver)
-# action_chains.click_and_hold(target_element).perform()
-
-# 模拟滚动条拖动
-# action_chains.move_by_offset(0, 50).release().perform()
+driver.find_element(By.XPATH, "/html/body/div[6]/div/div[2]/div/div[2]/div[2]/form/div[2]/div["
+                              "2]/div/div/div/div/div/div").click()
+sleep(2)
+driver.find_element(By.XPATH, "/html/body/div[9]/div/div/div/div[2]/div[1]/div/div/div/div").click()
+driver.find_element(By.XPATH, "/html/body/div[6]/div/div[2]/div/div[2]/div[2]/form/div[2]/div["
+                              "2]/div/div/div/div/div/div").click()
+driver.find_element(By.XPATH, "/html/body/div[6]/div/div[2]").click()
+sleep(1)
+driver.find_element(By.XPATH, "/html/body/div[6]/div/div[2]/div/div[2]/div[3]/button[2]/span").click()
+driver.find_element(By.XPATH, "/html/body/div[3]/div/div[2]/div/div[2]/div[3]/button[2]/span").click()
